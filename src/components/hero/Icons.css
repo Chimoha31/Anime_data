@@ -7,11 +7,12 @@
 }
 
 svg {
-  fill: rgba(0,0,0,0.5);
+  fill: rgba(0,0,0,0.3);
   transition: 1s;
 }
 svg:hover {
-  fill: purple;
+  /* fill: purple; */
+  fill: rgb(71, 68, 71);
   filter: drop-shadow(5px 5px 15px purple);
   transition: 0s;
 }

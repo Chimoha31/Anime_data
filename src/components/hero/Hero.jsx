@@ -5,6 +5,9 @@ import Icons from "./Icons";
 const Hero = () => {
   return (
     <div className="svgs_container">
+      <div className="title">
+        <h1>Anime Database</h1>
+      </div>
       <style>
         {`@keyframes animate {
     0% {
