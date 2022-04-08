@@ -1,13 +1,15 @@
-import React from 'react';
-import './Hero.css';
+import React from "react";
+import "./Hero.css";
+import Icon from "./Icon";
 
 const Hero = () => {
   return (
-    <div>
-      <h1>Hero</h1>
+    <div className="hero_section">
+      <div className="row">
+        <Icon />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
-
+export default Hero;
