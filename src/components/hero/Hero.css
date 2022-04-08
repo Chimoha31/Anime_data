@@ -1,0 +1,8 @@
+.svgs_container {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
+}
