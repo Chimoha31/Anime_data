@@ -4,12 +4,14 @@ import "./AnimeList.css";
 
 const AnimeList = () => {
   const [search, setSearch] = useState("");
+  const [animeList, setAnimeList] = useState([]);
 
   const getAnime = async (query) => {
     const response = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`
-    ).then(res => res.json());
-    console.log(response.results);
+      `https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=12`
+    );
+    const data = await response.json();
+    setAnimeList(data.results);
   };
 
   const handleSubmit = (e) => {
@@ -35,6 +37,11 @@ const AnimeList = () => {
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={search} />
       </form>
+      <div>
+        {animeList.map((anime, index) => (
+          <img src={anime.image_url} key={index} alt="anime img" />
+        ))}
+      </div>
     </div>
   );
 };
