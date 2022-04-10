@@ -13,6 +13,7 @@ const Icons = () => {
         <Icon />
         <Icon />
         <Icon />
+        <Icon />
       </div>
     </div>
   );
