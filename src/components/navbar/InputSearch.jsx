@@ -1,7 +1,7 @@
 import React from "react";
 
-const InputSearch = ({search, setSearch, animeList, setAnimeList}) => {
-
+const InputSearch = ({search, setSearch, setAnimeList}) => {
+// API--------------------------------------------------------
   const getAnime = async (query) => {
     const response = await fetch(
       `https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=12`
@@ -9,6 +9,7 @@ const InputSearch = ({search, setSearch, animeList, setAnimeList}) => {
     const data = await response.json();
     setAnimeList(data.results);
   };
+//------------------------------------------------------------
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ const InputSearch = ({search, setSearch, animeList, setAnimeList}) => {
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
