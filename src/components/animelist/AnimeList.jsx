@@ -21,10 +21,15 @@ const AnimeList = () => {
         show={show}
         setShow={setShow}
       />
+    
       {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
+      {show ? [] : <AiringAnime />}
+      {show ? [] : <UpcomingAnime />}
+      {show ? [] : <OVAAnime />}
+      {/* {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
       {show ? <SearchAnimeResult animeList={animeList} /> : <AiringAnime />}
       {show ? <SearchAnimeResult animeList={animeList} /> : <UpcomingAnime />}
-      {show ? <SearchAnimeResult animeList={animeList} /> : <OVAAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <OVAAnime />} */}
       {console.log(animeList)}
     </div>
   );

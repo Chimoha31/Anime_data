@@ -1,5 +1,5 @@
 import React from "react";
-import './SearchAnimeResult.css';
+import "./SearchAnimeResult.css";
 import { FavoriteBorder } from "@mui/icons-material";
 
 const SearchAnimeResult = ({ animeList }) => {
@@ -12,11 +12,14 @@ const SearchAnimeResult = ({ animeList }) => {
               <img src={anime.image_url} alt="anime img" />
             </a>
           </div>
-          <div className="titleAndheart">
+          <div>
             <h3>{anime.title}</h3>
+
+            <h4>Episodes: {anime.episodes}</h4>
+          </div>
+          <div>
             <FavoriteBorder />
           </div>
-          <h4>Episodes: {anime.episodes}</h4>
         </div>
       ))}
     </div>
