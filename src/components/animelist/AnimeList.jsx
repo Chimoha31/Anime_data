@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import styled from 'styled-components';
 import "./AnimeList.css";
 import NavBar from "../navbar/NavBar";
 import TopAnime from "../animelist/topAnime/TopAnime";
+import AiringAnime from '../animelist/airingAnime/AiringAnime'; 
 import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
 
 const AnimeList = () => {
@@ -20,6 +20,7 @@ const AnimeList = () => {
         setShow={setShow}
       />
       {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <AiringAnime />}
       {console.log(animeList)}
     </div>
   );

@@ -18,7 +18,7 @@
   width: 150px;
   border: 1px solid rgb(46, 45, 45);
   border-radius: 10px;
-  height: 100%;
+  height: auto;
 }
 
 .eachAnime_container img {
@@ -48,16 +48,6 @@
   visibility: visible;
   opacity: 1;
   bottom: -30%;
-}
-.eachAnime_container .anime_title h2,
-.eachAnime_container .anime_title p {
-  padding: 0;
-  margin: 0;
-}
-.eachAnime_container:hover .anime_title h2,
-.eachAnime_container:hover .anime_title p {
-  padding: 0;
-  margin: 0;
 }
 
 .anime_title h2 {
