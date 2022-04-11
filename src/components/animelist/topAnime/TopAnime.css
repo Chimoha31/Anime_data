@@ -1,0 +1,60 @@
+.category_title .h1 {
+  text-align: center;
+}
+
+.topanime_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.eachAnime_container {
+  width: 150px;
+  border: 3px solid rgb(231, 230, 230);
+  border-radius: 10px;
+  position: relative;
+}
+
+.eachAnime_container img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.eachAnime_container .anime_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.445);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.eachAnime_container:hover .anime_title {
+  animation: showToTop 1s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  bottom: 20px;
+  left: 50%;
+}
+
+
+@media (min-width: 767px) {
+  .eachAnime_container {
+    width: 300px;
+  }
+  .eachAnime_container img {
+    height: 350px;
+  }
+}
+@media (min-width: 1025px) {
+}
