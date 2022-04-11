@@ -1,38 +1,43 @@
 .category_title .h1 {
-  text-align: center;
+  font-family: 'Rubik Moonrocks', cursive;
+  color: #ccc;
 }
 
 .topanime_container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slick-slider {
+  margin: 0 auto;
 }
 
 .eachAnime_container {
-  width: 150px;
-  border: 3px solid rgb(231, 230, 230);
-  border-radius: 10px;
   position: relative;
+  width: 150px;
+  border: 1px solid rgb(46, 45, 45);
+  border-radius: 10px;
+  height: 100%;
 }
 
 .eachAnime_container img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   border-radius: 10px;
 }
 
 .eachAnime_container .anime_title {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: -40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: 310px;
   background-color: rgba(255, 255, 255, 0.445);
   visibility: hidden;
   opacity: 0;
@@ -40,20 +45,30 @@
 }
 
 .eachAnime_container:hover .anime_title {
-  animation: showToTop 1s ease-in-out;
   visibility: visible;
   opacity: 1;
-  bottom: 20px;
-  left: 50%;
+  bottom: -30%;
 }
 
+.anime_title h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+.anime_title p {
+  font-size: 1.3rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
 
 @media (min-width: 767px) {
-  .eachAnime_container {
-    width: 300px;
+  .anime_title h2 {
+    font-size: 1.5rem;
+    text-align: center;
   }
-  .eachAnime_container img {
-    height: 350px;
+  .anime_title p {
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1025px) {
