@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import "./TopAnime.css";
+import "./UpcomingAnime.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const TopAnime = () => {
-  const [topAnimeList, setTopAnimeList] = useState([]);
+const UpcomingAnime = () => {
+  const [upcomingAnimeList, setUpcomingAnimeList] = useState([]);
 
-  const topAnime = async () => {
+  const upcomingAnime = async () => {
     const response = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/bypopularity`
+      `https://api.jikan.moe/v3/top/anime/1/upcoming`
     );
     const data = await response.json();
     console.log(data.top);
-    setTopAnimeList(data.top);
+    setUpcomingAnimeList(data.top);
   };
 
   useEffect(() => {
-    topAnime();
+    upcomingAnime();
   }, []);
 
   // slider
@@ -59,19 +59,19 @@ const TopAnime = () => {
 
   return (
     <div className="category_title">
-      <h1 className="h1">Top Anime</h1>
+      <h1 className="h1">Upcoming</h1>
       <div className="topanime_container">
         <Slider {...settings}>
-          {topAnimeList.map((topAnime, index) => (
+          {upcomingAnimeList.map((upcomingAnime, index) => (
             <div key={index} className="eachAnime_container">
-              <a href={topAnime.url} target="_blank" rel="noreferrer">
-                <img src={topAnime.image_url} alt="anime img" />
+              <a href={upcomingAnime.url} target="_blank" rel="noreferrer">
+                <img src={upcomingAnime.image_url} alt="anime img" />
               </a>
               <div className="anime_title">
-                <h2>{topAnime.title}</h2>
-                <p>Rank: {topAnime.rank}</p>
-                <p>Score: {topAnime.score} / 10</p>
-                <p>Episodes: {topAnime.episodes}</p>
+                <h2>{upcomingAnime.title}</h2>
+                <p>Rank: {upcomingAnime.rank}</p>
+                <p>Score: {upcomingAnime.score} / 10</p>
+                <p>Episodes: {upcomingAnime.episodes}</p>
               </div>
             </div>
           ))}
@@ -81,4 +81,4 @@ const TopAnime = () => {
   );
 };
 
-export default TopAnime;
+export default UpcomingAnime;

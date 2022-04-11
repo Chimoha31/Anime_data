@@ -3,6 +3,7 @@ import "./AnimeList.css";
 import NavBar from "../navbar/NavBar";
 import TopAnime from "../animelist/topAnime/TopAnime";
 import AiringAnime from '../animelist/airingAnime/AiringAnime'; 
+import UpcomingAnime from '../animelist/upcoming/UpcomingAnime';
 import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
 
 const AnimeList = () => {
@@ -21,6 +22,7 @@ const AnimeList = () => {
       />
       {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
       {show ? <SearchAnimeResult animeList={animeList} /> : <AiringAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <UpcomingAnime />}
       {console.log(animeList)}
     </div>
   );

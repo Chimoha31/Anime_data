@@ -22,7 +22,7 @@ const Airing = () => {
 
   // slider
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     centerPadding: "60px",
     speed: 1000,
