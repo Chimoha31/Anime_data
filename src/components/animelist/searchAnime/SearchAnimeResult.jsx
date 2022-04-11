@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchAnimeResult = ({animeList}) => {
+  
   return (
     <div>
       {animeList.map((anime, index) => (
