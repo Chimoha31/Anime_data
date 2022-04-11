@@ -1,0 +1,24 @@
+.search_result_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.each_result_anime {
+  border: 3px solid red;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.each_result_anime .result_img img{
+  width: 100%;
+}
+
+.each_result_anime .titleAndheart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

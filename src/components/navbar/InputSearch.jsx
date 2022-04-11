@@ -1,4 +1,7 @@
 import React from "react";
+import './InputSearch.css';
+import SearchIcon from '@mui/icons-material/Search';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const InputSearch = ({ search, setSearch, setAnimeList, show, setShow }) => {
   // API--------------------------------------------------------
@@ -24,11 +27,13 @@ const InputSearch = ({ search, setSearch, setAnimeList, show, setShow }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <>
+      <form onSubmit={handleSubmit} className="search_input_container">
+        <FavoriteBorderIcon className="favorite_icon"/>
+        <SearchIcon className="search_icon"/>
         <input placeholder="Search…" onChange={handleChange} value={search} />
       </form>
-    </div>
+    </>
   );
 };
 
