@@ -7,7 +7,7 @@ const TopAnime = () => {
     const topAnime = async() => {
     const response = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`);
     const data = await response.json();
-    // console.log(data.top);
+    console.log(data.top);
     setTopAnimeList(data.top);
   }
   

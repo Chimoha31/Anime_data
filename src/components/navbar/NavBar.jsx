@@ -12,14 +12,14 @@ const NavBar = ({search, setSearch, setAnimeList, show, setShow }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar  className="nav_bar">
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-           <Link to="/animelist">Searching Anime</Link>
+           <Link to="/animelist" className="nav_title">Searching Anime</Link>
           </Typography>
           <InputSearch search={search} setSearch={setSearch} setAnimeList={setAnimeList} show={show} setShow={setShow} />
         </Toolbar>

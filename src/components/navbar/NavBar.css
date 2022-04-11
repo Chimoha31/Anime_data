@@ -1,0 +1,13 @@
+.nav_bar {
+  background-color: #333;
+}
+
+.nav_title {
+  background: -webkit-linear-gradient(0deg, #40E0D0, #09ff00, #FF0080);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Rubik Moonrocks', cursive;
+  font-family: 'Moo Lah Lah', cursive;
+  font-family: 'Rubik Wet Paint', cursive;
+  font-size: 2rem;
+}

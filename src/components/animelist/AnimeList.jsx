@@ -1,20 +1,25 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
+// import styled from 'styled-components';
 import "./AnimeList.css";
 import NavBar from "../navbar/NavBar";
-import TopAnime from '../animelist/topAnime/TopAnime';
-import SearchAnimeResult from'../animelist/searchAnime/SearchAnimeResult';
-
+import TopAnime from "../animelist/topAnime/TopAnime";
+import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
 
 const AnimeList = () => {
   const [search, setSearch] = useState("");
   const [animeList, setAnimeList] = useState([]);
   const [show, setShow] = useState(false);
 
-
   return (
-    <div>
-      <NavBar search={search} setSearch={setSearch} setAnimeList={setAnimeList} show={show} setShow={setShow} />
-      {show ? <SearchAnimeResult animeList={animeList} /> :  <TopAnime/> }
+    <div className="animelist_container">
+      <NavBar
+        search={search}
+        setSearch={setSearch}
+        setAnimeList={setAnimeList}
+        show={show}
+        setShow={setShow}
+      />
+      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
       {console.log(animeList)}
     </div>
   );
