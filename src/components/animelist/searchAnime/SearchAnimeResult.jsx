@@ -13,12 +13,12 @@ const SearchAnimeResult = ({ animeList }) => {
             </a>
           </div>
           <div>
-            <h3>{anime.title}</h3>
+            <h4>{anime.title}</h4>
 
-            <h4>Episodes: {anime.episodes}</h4>
+            <h5>Episodes: {anime.episodes}</h5>
           </div>
           <div>
-            <FavoriteBorder />
+            <FavoriteBorder className="fav_icon" />
           </div>
         </div>
       ))}

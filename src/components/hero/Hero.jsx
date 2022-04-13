@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import Icons from "./Icons";
+import google from "../../images/google.png";
 
 const Hero = () => {
   return (
@@ -8,6 +9,12 @@ const Hero = () => {
       <div className="title">
         <h1>Anime Database</h1>
       </div>
+
+      {/* Btn */}
+      <div>
+       
+      </div>
+
       <style>
         {`@keyframes animate {
     0% {
