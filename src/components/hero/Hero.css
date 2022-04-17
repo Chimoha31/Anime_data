@@ -22,6 +22,7 @@
   background: -webkit-linear-gradient(0deg, #40E0D0, #09ff00, #FF0080);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 2.7rem;
 }
 
 .login_link {
@@ -45,12 +46,12 @@
 }
 
 @media (min-width: 767px) {
-  .svgs_container .title {
-    font-size: 2.5rem;
+  .svgs_container .title h1{
+    font-size: 5rem;
   }
 }
 @media (min-width: 1025px) {
-  .svgs_container .title {
-    font-size: 3rem;
+  .svgs_container .title h1{
+    font-size: 7rem;
   }
 }
