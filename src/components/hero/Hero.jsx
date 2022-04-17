@@ -1,18 +1,19 @@
 import React from "react";
 import "./Hero.css";
 import Icons from "./Icons";
-import google from "../../images/google.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <div className="svgs_container">
       <div className="title">
         <h1>Anime Database</h1>
+        {/* Btn */}
       </div>
-
-      {/* Btn */}
-      <div>
-       
+      <div className="login_btn">
+        <Link to="/login" className="login_link">
+          To Login
+        </Link>
       </div>
 
       <style>

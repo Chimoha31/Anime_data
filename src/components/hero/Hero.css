@@ -11,6 +11,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  /* z-index:1; */
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.383);
   font-size: 1.4rem;
@@ -18,10 +19,31 @@
 }
 
 .svgs_container .title h1 {
-    background: -webkit-linear-gradient(0deg, #40E0D0, #09ff00, #FF0080);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(0deg, #40E0D0, #09ff00, #FF0080);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.login_link {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  z-index:1;
+  text-decoration: none;
+  background: -webkit-linear-gradient(0deg, #d8f7f2, #f1dec6, #eecbdc);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.login_link:hover {
+  opacity: 0.7;
+}
+
 @media (min-width: 767px) {
   .svgs_container .title {
     font-size: 2.5rem;
