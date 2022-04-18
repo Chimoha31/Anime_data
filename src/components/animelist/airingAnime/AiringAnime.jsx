@@ -18,8 +18,6 @@ const Airing = () => {
     airingAnime();
   }, []);
 
-  // slider
-
   return (
     <div className="category_title">
       <h1 className="h1">Airing</h1>

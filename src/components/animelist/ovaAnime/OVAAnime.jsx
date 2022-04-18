@@ -19,8 +19,6 @@ const OVAAnime = () => {
   useEffect(() => {
     ovaAnime();
   }, []);
-
-  // slider
   
   return (
     <div className="category_title">

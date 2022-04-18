@@ -1,0 +1,9 @@
+.loginEmail {
+  color: #ccc;
+}
+
+.loginEmail strong{
+  color: rgb(148, 241, 218);
+  font-weight: 900;
+}
+
