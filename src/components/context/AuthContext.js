@@ -24,6 +24,12 @@ export const UserAuthContextProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // Signin by using google
+  const signInGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider);
+  }
+
   // Signout=logout
   const logOut = () => {
     signOut(auth);
@@ -40,7 +46,7 @@ export const UserAuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <userAuthContext.Provider value={{signUp, logIn, user}}>{children}</userAuthContext.Provider>
+    <userAuthContext.Provider value={{user, signUp, logIn, signInGoogle, logOut}}>{children}</userAuthContext.Provider>
   );
 };
 

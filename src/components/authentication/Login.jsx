@@ -9,7 +9,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn } = useUserAuth();
+  const { logIn, signInGoogle } = useUserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,6 +17,16 @@ const Login = () => {
     setError("");
     try {
       await logIn(email, password);
+      navigate("/animelist");
+    } catch (e) {
+      setError(e.message);
+    }
+  };
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await signInGoogle();
       navigate("/animelist");
     } catch (e) {
       setError(e.message);
@@ -52,7 +62,7 @@ const Login = () => {
           </Form>
           <hr />
           <div>
-            <GoogleButton className="google_btn" />
+            <GoogleButton className="google_btn" onClick={handleGoogleSignIn} />
           </div>
         </div>
 
