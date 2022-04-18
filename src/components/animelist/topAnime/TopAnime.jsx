@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {useUserAuth} from '../../context/AuthContext';
+import {settings} from '../../../Slider';
 
 const TopAnime = () => {
   const [topAnimeList, setTopAnimeList] = useState([]);
@@ -22,42 +23,7 @@ const TopAnime = () => {
   }, []);
 
   // slider
-  const settings = {
-    dots: true,
-    infinite: false,
-    centerPadding: "60px",
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 780,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+  
   return (
     <div className="category_title">
       {<h3>Welcome, {user.email}</h3>}
