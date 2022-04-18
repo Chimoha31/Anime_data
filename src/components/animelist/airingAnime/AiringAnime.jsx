@@ -7,11 +7,9 @@ const Airing = () => {
   const [airingAnimeList, setAiringAnimeList] = useState([]);
 
   const airingAnime = async () => {
-    const response = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/airing`
-    );
+    const response = await fetch(`https://api.jikan.moe/v3/top/anime/1/airing`);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setAiringAnimeList(data.top);
   };
 

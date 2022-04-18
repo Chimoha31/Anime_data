@@ -40,7 +40,7 @@ export const UserAuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <userAuthContext.Provider value={{signUp}}>{children}</userAuthContext.Provider>
+    <userAuthContext.Provider value={{signUp, logIn, user}}>{children}</userAuthContext.Provider>
   );
 };
 
