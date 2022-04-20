@@ -37,7 +37,6 @@ const TopAnime = () => {
               <div className="anime_title">
                 <h2>{topAnime.title}</h2>
                 <p>Rank: {topAnime.rank}</p>
-                <p>Score: {topAnime.score} / 10</p>
                 <p>Episodes: {topAnime.episodes}</p>
               </div>
             </div>

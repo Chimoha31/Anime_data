@@ -33,7 +33,6 @@ const OVAAnime = () => {
               <div className="anime_title">
                 <h2>{ovaAnime.title}</h2>
                 <p>Rank: {ovaAnime.rank}</p>
-                <p>Score: {ovaAnime.score} / 10</p>
                 <p>Episodes: {ovaAnime.episodes}</p>
               </div>
             </div>

@@ -31,7 +31,6 @@ const Airing = () => {
               <div className="anime_title">
                 <h2>{airingAnime.title}</h2>
                 <p>Rank: {airingAnime.rank}</p>
-                <p>Score: {airingAnime.score} / 10</p>
                 <p>Episodes: {airingAnime.episodes}</p>
               </div>
             </div>
