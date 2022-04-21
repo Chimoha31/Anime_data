@@ -7,7 +7,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import InputSearch from "./InputSearch";
 
-const NavBar = ({ search, setSearch, setAnimeList, show, setShow }) => {
+const NavBar = ({ search, setSearch, setAnimeList, show, setShow, handleFavoriteButton }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,6 +28,7 @@ const NavBar = ({ search, setSearch, setAnimeList, show, setShow }) => {
             setAnimeList={setAnimeList}
             show={show}
             setShow={setShow}
+            handleFavoriteButton={handleFavoriteButton}
           />
         </Toolbar>
       </AppBar>

@@ -5,9 +5,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useUserAuth } from "../context/AuthContext";
 
-const InputSearch = ({ search, setSearch, setAnimeList, show, setShow }) => {
+const InputSearch = ({ search, setSearch, setAnimeList, setShow, handleFavoriteButton }) => {
   const [error, setError] = useState("");
   const { logOut } = useUserAuth();
+  
+
   // API--------------------------------------------------------
   const getSearchAnime = async (query) => {
     const response = await fetch(
@@ -34,10 +36,12 @@ const InputSearch = ({ search, setSearch, setAnimeList, show, setShow }) => {
     }
   };
 
+
+
   return (
     <>
       <form onSubmit={handleSubmit} className="search_input_container">
-        <FavoriteIcon className="favorite_icon" />
+        <FavoriteIcon className="favorite_icon" onClick={handleFavoriteButton} />
         <SearchIcon className="search_icon" />
         <input
           placeholder="Search…"
