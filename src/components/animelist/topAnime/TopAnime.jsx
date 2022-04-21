@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import './TopAnime.css';
+import FavoriteButton from '../parts/favoriteIcon/FavoriteButton';
+import "./TopAnime.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {useUserAuth} from '../../context/AuthContext';
-import {settings} from '../../../Slider';
+import { useUserAuth } from "../../context/AuthContext";
+import { settings } from "../../../Slider";
+
 
 const TopAnime = () => {
   const [topAnimeList, setTopAnimeList] = useState([]);
-  const {user} = useUserAuth();
+  const { user } = useUserAuth();
 
   const topAnime = async () => {
     const response = await fetch(
@@ -22,10 +24,14 @@ const TopAnime = () => {
   useEffect(() => {
     topAnime();
   }, []);
-  
+
   return (
     <div className="category_title">
-      {<h3 className="mt-5 pb-2 text-center loginEmail">Welcome, <strong>{user.email}</strong></h3>}
+      {
+        <h3 className="mt-5 pb-2 text-center loginEmail">
+          Welcome, <strong>{user.email}</strong>
+        </h3>
+      }
       <h1 className="h1">Top Anime</h1>
       <div className="topanime_container">
         <Slider {...settings}>
@@ -34,6 +40,7 @@ const TopAnime = () => {
               <a href={topAnime.url} target="_blank" rel="noreferrer">
                 <img src={topAnime.image_url} alt="anime img" />
               </a>
+              <FavoriteButton />
               <div className="anime_title">
                 <h2>{topAnime.title}</h2>
                 <p>Rank: {topAnime.rank}</p>

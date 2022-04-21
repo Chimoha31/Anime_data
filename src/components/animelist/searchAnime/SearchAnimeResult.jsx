@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchAnimeResult.css";
-import { FavoriteBorder } from "@mui/icons-material";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const SearchAnimeResult = ({ animeList }) => {
   return (
@@ -18,7 +18,7 @@ const SearchAnimeResult = ({ animeList }) => {
             <h5>Episodes: {anime.episodes}</h5>
           </div>
           <div>
-            <FavoriteBorder className="fav_icon" />
+            <FavoriteIcon className="fav_icon" />
           </div>
         </div>
       ))}

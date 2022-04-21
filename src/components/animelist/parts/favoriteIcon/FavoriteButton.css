@@ -1,0 +1,13 @@
+.favorite_icon {
+  border: 1px solid rgb(170, 12, 12);
+  background-color:rgb(170, 12, 12);
+  border-radius: 50%;
+  margin: 10px;
+  padding: 3px;
+  color: #fff;
+}
+
+.favorite_icon:hover {
+  filter: none;
+  cursor: pointer;
+}

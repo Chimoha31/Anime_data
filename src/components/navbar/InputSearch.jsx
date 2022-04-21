@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./InputSearch.css";
 import SearchIcon from "@mui/icons-material/Search";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useUserAuth } from "../context/AuthContext";
 
@@ -37,7 +37,7 @@ const InputSearch = ({ search, setSearch, setAnimeList, show, setShow }) => {
   return (
     <>
       <form onSubmit={handleSubmit} className="search_input_container">
-        <FavoriteBorderIcon className="favorite_icon" />
+        <FavoriteIcon className="favorite_icon" />
         <SearchIcon className="search_icon" />
         <input
           placeholder="Search…"

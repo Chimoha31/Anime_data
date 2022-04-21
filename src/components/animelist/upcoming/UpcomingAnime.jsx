@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import FavoriteButton from '../parts/favoriteIcon/FavoriteButton';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -31,6 +32,7 @@ const UpcomingAnime = () => {
               <a href={upcomingAnime.url} target="_blank" rel="noreferrer">
                 <img src={upcomingAnime.image_url} alt="anime img" />
               </a>
+              <FavoriteButton />
               <div className="anime_title">
                 <h2>{upcomingAnime.title}</h2>
                 <p>Rank: {upcomingAnime.rank}</p>
