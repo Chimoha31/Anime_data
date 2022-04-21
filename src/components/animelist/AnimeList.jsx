@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./AnimeList.css";
 import NavBar from "../navbar/NavBar";
-import TopAnime from "../animelist/topAnime/TopAnime";
-// import AiringAnime from '../animelist/airingAnime/AiringAnime'; 
-// import UpcomingAnime from '../animelist/upcoming/UpcomingAnime';
-// import OVAAnime from '../animelist/ovaAnime/OVAAnime';
+import TopAnime from "./Anime/TopAnime";
+import AiringAnime from '../animelist/Anime/AiringAnime'; 
+import UpcomingAnime from '../animelist/Anime/UpcomingAnime';
+import OVAAnime from '../animelist/Anime/OVAAnime';
 import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
 import FavoriteItem from '../favorite/FavoriteItem';
 
@@ -32,11 +32,9 @@ const AnimeList = () => {
       />
     
       {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
-      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
-      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
-      {/* {show ? [] : <AiringAnime />}
+      {show ? [] : <AiringAnime />}
       {show ? [] : <UpcomingAnime />}
-      {show ? [] : <OVAAnime />} */}
+      {show ? [] : <OVAAnime />}
       {showFavoritList ? <FavoriteItem /> : []}
     </div>
   );
