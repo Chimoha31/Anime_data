@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./AnimeList.css";
 import NavBar from "../navbar/NavBar";
 import TopAnime from "../animelist/topAnime/TopAnime";
-import AiringAnime from '../animelist/airingAnime/AiringAnime'; 
-import UpcomingAnime from '../animelist/upcoming/UpcomingAnime';
-import OVAAnime from '../animelist/ovaAnime/OVAAnime';
+// import AiringAnime from '../animelist/airingAnime/AiringAnime'; 
+// import UpcomingAnime from '../animelist/upcoming/UpcomingAnime';
+// import OVAAnime from '../animelist/ovaAnime/OVAAnime';
 import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
 import FavoriteItem from '../favorite/FavoriteItem';
 
@@ -13,7 +13,6 @@ const AnimeList = () => {
   const [animeList, setAnimeList] = useState([]);
   const [show, setShow] = useState(false);
   const [showFavoritList, setFavoriteList] = useState(false);
-
 
     // Favorite button
     const handleFavoriteButton = () => {
@@ -33,9 +32,11 @@ const AnimeList = () => {
       />
     
       {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
-      {show ? [] : <AiringAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
+      {/* {show ? [] : <AiringAnime />}
       {show ? [] : <UpcomingAnime />}
-      {show ? [] : <OVAAnime />}
+      {show ? [] : <OVAAnime />} */}
       {showFavoritList ? <FavoriteItem /> : []}
     </div>
   );

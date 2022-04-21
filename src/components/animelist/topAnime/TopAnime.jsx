@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useUserAuth } from "../../context/AuthContext";
 import { settings } from "../../../Slider";
-
+import AnimeData from '../../../AnimeData';
 
 const TopAnime = () => {
   const [topAnimeList, setTopAnimeList] = useState([]);
