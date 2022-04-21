@@ -8,7 +8,7 @@ import { useUserAuth } from "../../authentication/context/AuthContext";
 import { settings } from "../../../Slider";
 // import AnimeData from '../../../AnimeData';
 
-const TopAnime = () => {
+const TopAnime = ({handleFavBtn}) => {
   const [topAnimeList, setTopAnimeList] = useState([]);
   const { user } = useUserAuth();
 
@@ -25,6 +25,8 @@ const TopAnime = () => {
     topAnime();
   }, []);
 
+
+
   return (
     <div className="category_title">
       {
@@ -40,7 +42,7 @@ const TopAnime = () => {
               <a href={topAnime.url} target="_blank" rel="noreferrer">
                 <img src={topAnime.image_url} alt="anime img" />
               </a>
-              <FavoriteButton />
+              <FavoriteButton handleFavBtn={handleFavBtn} />
               <div className="anime_title">
                 <h2>{topAnime.title}</h2>
                 <p>Rank: {topAnime.rank}</p>

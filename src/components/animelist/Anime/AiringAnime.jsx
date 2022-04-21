@@ -5,10 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {settings} from '../../../Slider';
 
-const Airing = () => {
+const Airing = ({handleFavBtn}) => {
   const [airingAnimeList, setAiringAnimeList] = useState([]);
 
   const airingAnime = async () => {
+    
     const response = await fetch(`https://api.jikan.moe/v3/top/anime/1/airing`);
     const data = await response.json();
     // console.log(data);
@@ -29,7 +30,7 @@ const Airing = () => {
               <a href={airingAnime.url} target="_blank" rel="noreferrer">
                 <img src={airingAnime.image_url} alt="anime img" />
               </a>
-              <FavoriteButton />
+              <FavoriteButton handleFavBtn={handleFavBtn} />
               <div className="anime_title">
                 <h2>{airingAnime.title}</h2>
                 <p>Rank: {airingAnime.rank}</p>

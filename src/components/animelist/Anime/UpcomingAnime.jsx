@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {settings} from '../../../Slider';
 
-const UpcomingAnime = () => {
+const UpcomingAnime = ({handleFavBtn}) => {
   const [upcomingAnimeList, setUpcomingAnimeList] = useState([]);
 
   const upcomingAnime = async () => {
@@ -32,7 +32,7 @@ const UpcomingAnime = () => {
               <a href={upcomingAnime.url} target="_blank" rel="noreferrer">
                 <img src={upcomingAnime.image_url} alt="anime img" />
               </a>
-              <FavoriteButton />
+              <FavoriteButton handleFavBtn={handleFavBtn} />
               <div className="anime_title">
                 <h2>{upcomingAnime.title}</h2>
                 <p>Rank: {upcomingAnime.rank}</p>

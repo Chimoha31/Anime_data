@@ -36,8 +36,6 @@ const InputSearch = ({ search, setSearch, setAnimeList, setShow, handleFavoriteB
     }
   };
 
-
-
   return (
     <>
       <form onSubmit={handleSubmit} className="search_input_container">

@@ -6,7 +6,7 @@ import AiringAnime from '../animelist/Anime/AiringAnime';
 import UpcomingAnime from '../animelist/Anime/UpcomingAnime';
 import OVAAnime from '../animelist/Anime/OVAAnime';
 import SearchAnimeResult from "../animelist/searchAnime/SearchAnimeResult";
-import FavoriteItem from '../favorite/FavoriteItem';
+import FavoriteItem from '../favoriteModal/FavoriteItem';
 
 const AnimeList = () => {
   const [search, setSearch] = useState("");
@@ -17,7 +17,11 @@ const AnimeList = () => {
     // Favorite button
     const handleFavoriteButton = () => {
       setFavoriteList(true);
-      console.log(showFavoritList);
+    }
+
+    // Each anime favorite button
+    const handleFavBtn = () => {
+      console.log("Clicked");
     }
 
   return (
@@ -31,10 +35,10 @@ const AnimeList = () => {
         handleFavoriteButton={handleFavoriteButton}
       />
     
-      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime />}
-      {show ? [] : <AiringAnime />}
-      {show ? [] : <UpcomingAnime />}
-      {show ? [] : <OVAAnime />}
+      {show ? <SearchAnimeResult animeList={animeList} /> : <TopAnime handleFavBtn={handleFavBtn} />}
+      {show ? [] : <AiringAnime handleFavBtn={handleFavBtn} />}
+      {show ? [] : <UpcomingAnime handleFavBtn={handleFavBtn} />}
+      {show ? [] : <OVAAnime handleFavBtn={handleFavBtn} />}
       {showFavoritList ? <FavoriteItem /> : []}
     </div>
   );

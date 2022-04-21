@@ -2,10 +2,11 @@ import React from 'react';
 import './FavoriteButton.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const FavoriteButton = () => {
+const FavoriteButton = ({handleFavBtn}) => {
   return (
     <>
-        <FavoriteIcon className="favorite_icon" />
+        <FavoriteIcon className="favorite_icon" onClick={handleFavBtn}/>
+        
     </>
   )
 }

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {settings} from '../../../Slider';
 
-const OVAAnime = () => {
+const OVAAnime = ({handleFavBtn}) => {
   const [OVAAnimeList, setOVAAnimeList] = useState([]);
 
   const ovaAnime = async () => {
@@ -31,7 +31,7 @@ const OVAAnime = () => {
               <a href={ovaAnime.url} target="_blank" rel="noreferrer">
                 <img src={ovaAnime.image_url} alt="anime img" />
               </a>
-              <FavoriteButton />
+              <FavoriteButton handleFavBtn={handleFavBtn} />
               <div className="anime_title">
                 <h2>{ovaAnime.title}</h2>
                 <p>Rank: {ovaAnime.rank}</p>

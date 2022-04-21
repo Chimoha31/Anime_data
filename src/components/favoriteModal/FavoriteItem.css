@@ -1,5 +1,7 @@
 .cart-item {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #8a2b06;
@@ -9,7 +11,7 @@
 
 .cart-item h2 {
   margin: 0 0 0.5rem 0;
-  color: #363636;
+  color: #7c2727;
 }
 
 .summary {
