@@ -4,7 +4,7 @@ import "./Anime.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useUserAuth } from "../../context/AuthContext";
+import { useUserAuth } from "../../authentication/context/AuthContext";
 import { settings } from "../../../Slider";
 // import AnimeData from '../../../AnimeData';
 

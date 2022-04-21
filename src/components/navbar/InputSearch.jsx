@@ -3,7 +3,7 @@ import "./InputSearch.css";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useUserAuth } from "../context/AuthContext";
+import { useUserAuth } from "../authentication/context/AuthContext";
 
 const InputSearch = ({ search, setSearch, setAnimeList, setShow, handleFavoriteButton }) => {
   const [error, setError] = useState("");

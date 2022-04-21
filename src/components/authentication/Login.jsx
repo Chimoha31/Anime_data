@@ -3,7 +3,7 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Container, Form } from "react-bootstrap";
 import GoogleButton from "react-google-button";
-import { useUserAuth } from "../context/AuthContext";
+import { useUserAuth } from "../authentication/context/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");

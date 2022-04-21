@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Container, Form } from "react-bootstrap";
-import {useUserAuth} from '../context/AuthContext';
+import {useUserAuth} from '../authentication/context/AuthContext';
 
 const Signup = () => {
   const [email, setEmail] = useState("");

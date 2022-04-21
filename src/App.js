@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/authentication/Login";
 import Signup from "./components/authentication/Signup";
 import ProtectedRoute from "./components/authentication/ProtectedRoute";
-import { UserAuthContextProvider } from "./components/context/AuthContext";
+import { UserAuthContextProvider } from "./components/authentication/context/AuthContext";
 
 const App = () => {
   return (
